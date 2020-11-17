@@ -1,3 +1,7 @@
+"""
+ Using StringIO module to temporarily store data in memory
+"""
+
 import urllib.request
 import urllib.parse
 import urllib.error
