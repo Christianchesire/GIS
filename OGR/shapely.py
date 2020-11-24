@@ -1,0 +1,10 @@
+from shapely import wkt, geometry
+
+wktPoly = "POLYGON((0 0,4 0,4 4,0 4, 0 0))"
+poly = wkt.loads(wktPoly)
+# output the polygon area
+print(poly.area)
+
+buf = poly.buffer(5.0)
+print(buf.area)
+print(buf.difference(poly).area)
