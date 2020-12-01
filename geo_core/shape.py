@@ -1,0 +1,10 @@
+import shapefile
+r = shapefile.Reader('MSCities_Geo_Pts')
+print(r)
+print("Bounding box", r.bbox)
+print("Shape Type", r.shapeType)
+print("Number of records", r.numRecords)
+print(r.fields)
+print("Using list comprehension", [item[0] for item in r.fields[1:]])
+print("\nRecord two: ", r.record(2))
+print("\nRecord value: ", r.record(2)[4])
